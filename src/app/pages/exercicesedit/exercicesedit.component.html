@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Modifier un exercice</h1>
+  <a routerLink="/list/exercice" class="btnback">Retour à la liste</a>
+  <hr />
+  <form (ngSubmit)="editExercise()" #exerciseForm="ngForm">
+    <label for="username">Nom d'utilisateur:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="exercise.username" required>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" [(ngModel)]="exercise.description" required>
+
+    <label for="duration">Durée (en minutes):</label>
+    <input type="number" id="duration" name="duration" [(ngModel)]="exercise.duration" required>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" [(ngModel)]="exercise.date" required>
+
+    <button type="submit" class="btnadd">Modifier</button>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+.bg-footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.bg-footer p {
+  text-align: center;
+}

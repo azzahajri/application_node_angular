@@ -1,0 +1,27 @@
+<div>
+  <h1>Liste des exercises</h1>
+  <a routerLink="/user/add" class="btnadd">Ajouter</a>
+  <hr />
+
+  <table class="list">
+    <thead>
+      <tr>
+        <th>username</th>
+        <th>email</th>
+        <th>isAdmin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{ u.username }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.isAdmin }}</td>
+
+        <td>
+          <a class="btnedit" >Modifier</a>
+          <a  class="btndelete" >Supprimer</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

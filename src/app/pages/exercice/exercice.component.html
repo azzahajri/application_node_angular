@@ -1,0 +1,29 @@
+<div>
+  <h1>Liste des exercises</h1>
+  <a routerLink="/exercice/add" class="btnadd">Ajouter</a>
+  <hr />
+
+  <table class="list">
+    <thead>
+      <tr>
+        <th>Utilisateur</th>
+        <th>Description</th>
+        <th>Duration</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exe of exercises">
+        <td>{{ exe.username }}</td>
+        <td>{{ exe.description }}</td>
+        <td>{{ exe.duration }}</td>
+        <td>{{ exe.date | date: 'short' }}</td>
+        <td>
+          <a class="btnedit" routerLink="/exercise/edit/{{exe._id}}">Modifier</a>
+          <a  class="btndelete" (click)="deleteExercise(exe._id)">Supprimer</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
